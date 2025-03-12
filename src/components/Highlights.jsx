@@ -1,6 +1,7 @@
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import { watchImg } from "../utils"
+import VideoCarousel from "./VideoCarousel"
 
 const Highlights = () => {
     useGSAP(() => {
@@ -11,6 +12,8 @@ const Highlights = () => {
         gsap.to('.link', {
             opacity: 1,
             y: 0,
+            duration: 1,
+            stagger: 0.25
         })
     },[])
   return (
@@ -23,6 +26,7 @@ const Highlights = () => {
                     <p className="link">Watch the Event</p>
                 </div>
             </div>
+            <VideoCarousel />
         </div>
     </section>
   )
